@@ -15,24 +15,55 @@ else{
 
 // UC-2  Calculate Daily Employee Wage based on part time or full time work
 
-const IS_PART_TIME = 1;
-const IS_FULL_TIME = 2;
-const PART_TIME_HOURS = 4;
-const FULL_TIME_HOURS = 8;
-const WAGE_PER_HOUR = 20;
+// const IS_PART_TIME = 1;
+// const IS_FULL_TIME = 2;
+// const PART_TIME_HOURS = 4;
+// const FULL_TIME_HOURS = 8;
+// const WAGE_PER_HOUR = 20;
 
-let empHrs;
-let empCheck = Math.floor(Math.random() * 3);
-switch (empCheck) {
-    case IS_PART_TIME:
-        empHrs = PART_TIME_HOURS;
-        break;
-    case IS_FULL_TIME:
-        empHrs = FULL_TIME_HOURS;
-        break;
-    default:
-        empHrs = 0;
+// let empHrs;
+// let empCheck = Math.floor(Math.random() * 3);
+// switch (empCheck) {
+//     case IS_PART_TIME:
+//         empHrs = PART_TIME_HOURS;
+//         break;
+//     case IS_FULL_TIME:
+//         empHrs = FULL_TIME_HOURS;
+//         break;
+//     default:
+//         empHrs = 0;
+// }
+// console.log(empHrs);
+// let empWage = empHrs * WAGE_PER_HOUR;
+// console.log("Emp Wage: $" + empWage);
+
+
+
+// UC-3 calculating dailywage of an employee with using a function
+
+let workingHours = Math.floor(Math.random()*10)%3;
+
+const isPartTime = 1;
+const isFullTime = 2;
+const partTime = 4;
+const fullTime = 8;
+const wagePerHour = 20;
+
+function getWorkingHours(workingHours){
+    switch(workingHours){
+
+        case isPartTime:
+            return partTime;
+
+        case isFullTime:
+            return fullTime;
+
+        default :
+            return 0;
+
+    }
 }
-console.log(empHrs);
-let empWage = empHrs * WAGE_PER_HOUR;
-console.log("Emp Wage: $" + empWage);
+
+let wage = wagePerHour*getWorkingHours(workingHours);
+
+console.log("Daily wage generated for employee is $",wage);
