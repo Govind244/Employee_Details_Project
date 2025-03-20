@@ -1,4 +1,4 @@
-//UC-1 checking 
+//UC-1 Check the Presence of Employee
 const present = 1;
 
 let isPresent = Math.floor(Math.random()*10)%2;
